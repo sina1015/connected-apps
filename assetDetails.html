@@ -44,8 +44,11 @@
                     </div>
                     <div class="flex items-center mt-4 text-gray-600 text-sm">
                         <span class="font-medium">Warranty Expiry Date:</span>
-                        <span class="ml-2 text-gray-800 text-xs">{{ warrentyExpiryDatex }}</span>
+                        <span class="ml-2 text-gray-800 text-xs">{{ warrentyExpiryDate }}</span>
                     </div>
+                    <div class="flex items-center mt-4 text-gray-600 text-sm">
+                        <span class="font-medium">Warranty Type:</span>
+                        <span class="ml-2 text-gray-800 text-xs">{{ warrantyType }}</span>
                     </div>
                 </div>
             </div>
@@ -61,8 +64,9 @@
                     model: '',
                     manufacturer: '',
                     warrantyName: '',
-                    warrentyExpiryDatex: '',
+                    warrentyExpiryDate: '',
                     serialNumber: '',
+                    warrantyType: '',
                     dataFetched: false,
                     criteriaMap: {},
                     asset: null,
@@ -103,7 +107,7 @@
                     let urlParams = {
                         method: 'post',
                         data: {
-                            workflowId: 389,
+                            workflowId: 5853,
                             paramList: [this.criteriaMap]
                         }
                     }
@@ -118,7 +122,8 @@
                             this.model = res.model || '';
                             this.manufacturer = res.manufacturer || '';
                             this.warrantyName = res.warrentyName || '';
-                            this.warrentyExpiryDatex = res.warrentyExpiryDate || '';
+                            this.warrentyExpiryDate = res.warrentyExpiryDate || '';
+                            this.warrantyType = res.warrantyType || '';
                             this.serialNumber = res.serialNumber || '';
                             
                         }
