@@ -50,10 +50,10 @@
                         <span class="font-medium">Warranty Type:</span>
                         <span class="ml-2 text-gray-800 text-xs">{{ warrantyType }}</span>
                     </div>
-                    <div class="flex items-center mt-4 text-gray-600 text-sm">
+                    <!-- <div class="flex items-center mt-4 text-gray-600 text-sm">
                         <span class="font-medium">Refrigerant Type:</span>
                         <span class="ml-2 text-gray-800 text-xs">{{ refrigerantType }}</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                     warrentyExpiryDate: '',
                     serialNumber: '',
                     warrantyType: '',
-                    refrigerantType: '',
+                    // refrigerantType: '',
                     dataFetched: false,
                     criteriaMap: {},
                     asset: null,
@@ -130,7 +130,7 @@
                             this.warrentyExpiryDate = res.warrentyExpiryDate || '';
                             this.warrantyType = res.warrantyType || '';
                             this.serialNumber = res.serialNumber || '';
-                            this.refrigerantType = res.refrigerantType || '';
+                            // this.refrigerantType = res.refrigerantType || '';
                             
                         }
                     } catch(error) {
