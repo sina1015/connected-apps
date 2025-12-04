@@ -31,6 +31,10 @@
                         <span class="ml-2 text-gray-800 text-xs">{{ model }}</span>
                     </div>
                     <div class="flex items-center mt-4 text-gray-600 text-sm">
+                        <span class="font-medium">Asset Type:</span>
+                        <span class="ml-2 text-gray-800 text-xs">{{ type }}</span>
+                    </div>
+                    <div class="flex items-center mt-4 text-gray-600 text-sm">
                         <span class="font-medium">Manufacturer:</span>
                         <span class="ml-2 text-gray-800 text-xs">{{ manufacturer }}</span>
                     </div>
@@ -66,6 +70,7 @@
             data () {
                 return {
                     model: '',
+                    type: '',
                     manufacturer: '',
                     warrantyName: '',
                     warrentyExpiryDate: '',
@@ -125,6 +130,7 @@
                             console.log("asset function res", res);
 
                             this.model = res.model || '';
+                            this.type = res.type || '';
                             this.manufacturer = res.manufacturer || '';
                             this.warrantyName = res.warrentyName || '';
                             this.warrentyExpiryDate = res.warrentyExpiryDate || '';
